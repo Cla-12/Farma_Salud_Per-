@@ -1,0 +1,397 @@
+/* ============================================ */
+/* VARIABLES CSS NATIVAS                        */
+/* ============================================ */
+:root {
+  --primary-color: #008080;
+  --primary-dark: #005959;
+  --secondary-color: #0275d8;
+  --bg-main: #f4f7f6;
+  --bg-card: #ffffff;
+  --bg-alt: #e8f3f1;
+  --text-dark: #222222;
+  --text-muted: #666666;
+  --border-color: #cccccc;
+  --badge-free-bg: #d4edda;
+  --badge-free-text: #155724;
+  --badge-rx-bg: #f8d7da;
+  --badge-rx-text: #721c24;
+}
+
+/* Reset general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.main-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-header .logo h1 {
+  font-size: 1.8rem;
+}
+
+.main-header .logo p {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #a8e6cf;
+  text-decoration: underline;
+}
+
+/* Contenedor principal y secciones */
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.content-section {
+  margin: 30px 0;
+  padding: 30px 20px;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* 1. Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), #004d4d);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 8px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  color: white;
+  border: none;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #218838;
+}
+
+/* 2. Catálogo y Búsqueda */
+.search-container {
+  margin-bottom: 25px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.category-block {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  padding-left: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card .presentation {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 8px;
+  display: block;
+}
+
+.card h4 {
+  margin: 5px 0 2px;
+  font-size: 1.05rem;
+}
+
+.card .brand {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card .desc {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.price-container {
+  margin: 12px 0;
+}
+
+.price-regular {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  display: block;
+}
+
+.card .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card .price small {
+  font-size: 0.75rem;
+  color: #28a745;
+  font-weight: normal;
+}
+
+.btn-card {
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.btn-card:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Badges */
+.badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.badge.libre {
+  background-color: var(--badge-free-bg);
+  color: var(--badge-free-text);
+}
+
+.badge.receta {
+  background-color: var(--badge-rx-bg);
+  color: var(--badge-rx-text);
+}
+
+/* 3. Pasos */
+.steps-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.step {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+/* 4. Formulario */
+.custom-form fieldset {
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.custom-form legend {
+  font-weight: bold;
+  padding: 0 8px;
+  color: var(--primary-color);
+}
+
+.custom-form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* Selectores de atributo */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-dark);
+}
+
+/* 5. Ubicación y Contacto */
+.contact-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-info, .map-placeholder {
+  flex: 1;
+  min-width: 280px;
+}
+
+.map-placeholder {
+  background-color: #dbe2e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
