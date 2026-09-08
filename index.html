@@ -1,225 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FarmaSalud Perú | Portal Informativo Institucional</title>
-  <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaSalud Perú - Portal Informativo</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-  <!-- ENCABEZADO INSTITUCIONAL -->
-  <header class="main-header">
-    <div class="logo">
-      <h1>FarmaSalud Perú</h1>
-      <p>Portal de Consulta de Medicamentos y Servicios de Salud</p>
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#inicio">1. Inicio</a></li>
-        <li><a href="#catalogo">2. Catálogo</a></li>
-        <li><a href="#requisitos">3. Requisitos</a></li>
-        <li><a href="#formulario">4. Consultas</a></li>
-        <li><a href="#ubicacion">5. Ubicación</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Encabezado Principal -->
+    <header>
+        <div class="logo">
+            <h1>FarmaSalud Perú</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#requisitos">Requisitos</a></li>
+                <li><a href="#consultas">Consultas</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="main-container">
+    <main class="main-container">
 
-    <!-- SECCIÓN 1: INICIO -->
-    <section id="inicio" class="hero-section">
-      <div class="hero-content">
-        <h2>Guía Informativa de Medicamentos y Servicios Farmacéuticos</h2>
-        <p>Consulte la lista de productos disponibles, condiciones de venta (con o sin receta) y la ubicación de nuestras sedes de atención en Lima.</p>
-        <a href="#catalogo" class="btn-cta">Ver Catálogo Informativo</a>
-      </div>
-    </section>
+        <!-- Sección 1: Inicio -->
+        <section id="inicio" class="content-section">
+            <h2>Bienvenido a FarmaSalud Perú</h2>
+            <p>Portal institucional de orientación farmacéutica. Consulta la disponibilidad de medicamentos y precios referenciales.</p>
+            <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+        </section>
 
-    <!-- SECCIÓN 2: SERVICIOS / CATÁLOGO INFORMATIVO -->
-    <section id="catalogo" class="content-section">
-      <div class="section-header">
-        <h2>2. Catálogo Informativo de Productos</h2>
-        <p class="section-desc">Consulte especificaciones, marcas y precios referenciales de nuestro catálogo institucional.</p>
-      </div>
+        <!-- Sección 2: Catálogo (SIMPLIFICADO) -->
+        <section id="catalogo" class="content-section">
+            <h2>Catálogo de Medicamentos</h2>
+            
+            <!-- Analgésicos -->
+            <div class="category-block">
+                <h3>Analgésicos y Antipiréticos (Venta Libre)</h3>
+                <div class="grid-container">
+                    
+                    <article class="card">
+                        <span class="badge libre">Venta Libre</span>
+                        <img src="img/panadol.png" alt="Panadol Forte" class="card-img">
+                        <div class="card-body">
+                            <span class="presentation">CAJA 20 TABLETAS</span>
+                            <h4>Panadol Forte 500 mg</h4>
+                            <p class="price">S/ 4.20 <small>Precio Referencial</small></p>
+                            <a href="#consultas" class="btn-card">Consultar</a>
+                        </div>
+                    </article>
 
-      <!-- Buscador -->
-      <div class="search-container">
-        <input type="text" placeholder="Buscar medicamento o principio activo (ej. Panadol, Amoxicilina...)" class="search-input">
-      </div>
+                    <article class="card">
+                        <span class="badge libre">Venta Libre</span>
+                        <img src="img/Ibuprofeno.png" alt="Ibuprofeno" class="card-img">
+                        <div class="card-body">
+                            <span class="presentation">CAJA 10 TABLETAS</span>
+                            <h4>Ibuprofeno 400 mg</h4>
+                            <p class="price">S/ 3.50 <small>Precio Referencial</small></p>
+                            <a href="#consultas" class="btn-card">Consultar</a>
+                        </div>
+                    </article>
 
-      <!-- Subsección A: Analgésicos -->
-      <div class="category-block">
-        <h3 class="category-title">Analgésicos y Antipiréticos (Venta Libre)</h3>
-        <div class="grid-container">
-
-          <article class="card">
-            <span class="badge libre">Venta Libre</span>
-            <img src="img/panadol.png" alt="Panadol forte 500mg" class="card-img">
-            <div class="card-body">
-              <span class="presentation">CAJA 20 TABLETAS</span>
-              <h4>Panadol Forte 500 mg</h4>
-              <p class="brand">Laboratorio: GSK PERÚ</p>
-              <p class="desc">Indicado para el alivio sintomático del dolor leve a moderado y la fiebre.</p>
-              <div class="price-container">
-                <p class="price">S/ 4.20 <small>Precio Referencial</small></p>
-              </div>
-              <a href="#formulario" class="btn-card">Consultar Disponibilidad</a>
+                </div>
             </div>
-          </article>
 
-          <article class="card">
-            <span class="badge libre">Venta Libre</span>
-            <img src="img/Ibuprofeno.png" alt="Ibuprofeno 400 mg" class="card-img">
+            <!-- Bajo Prescripción -->
+            <div class="category-block">
+                <h3>Fármacos Bajo Prescripción Médica</h3>
+                <div class="grid-container">
 
-            <div class="card-body">
-              <span class="presentation">CAJA 10 TABLETAS</span>
-              <h4>Ibuprofeno 400 mg</h4>
-              <p class="brand">Laboratorio: PORTUGAL</p>
-              <p class="desc">Antiinflamatorio no esteroideo indicado para dolores musculares y articulares.</p>
-              <div class="price-container">
-                <p class="price">S/ 3.50 <small>Precio Referencial</small></p>
-              </div>
-              <a href="#formulario" class="btn-card">Consultar Disponibilidad</a>
+                    <article class="card">
+                        <span class="badge receta">Requiere Receta</span>
+                        <img src="img/amoxicilina.png" alt="Amoxicilina" class="card-img">
+                        <div class="card-body">
+                            <span class="presentation">CAJA 10 TABLETAS</span>
+                            <h4>Amoxicilina 500 mg</h4>
+                            <p class="price">S/ 15.20 <small>Precio Referencial</small></p>
+                            <a href="#consultas" class="btn-card">Consultar</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <span class="badge receta">Requiere Receta</span>
+                        <img src="img/LosartanPotasico.jpg" alt="Losartán" class="card-img">
+                        <div class="card-body">
+                            <span class="presentation">CAJA 30 TABLETAS</span>
+                            <h4>Losartán Potásico 50 mg</h4>
+                            <p class="price">S/ 12.00 <small>Precio Referencial</small></p>
+                            <a href="#consultas" class="btn-card">Consultar</a>
+                        </div>
+                    </article>
+
+                </div>
             </div>
-          </article>
+        </section>
 
-        </div>
-      </div>
-
-      <!-- Subsección B: Antibióticos -->
-      <div class="category-block">
-        <h3 class="category-title">Fármacos Bajo Prescripción Médica</h3>
-        <div class="grid-container">
-
-          <article class="card">
-            <span class="badge receta">Requiere Receta</span>
-            <img src="img/amoxicilina.png" alt="amoxicilina 500 mg" class="card-img">
-
-            <div class="card-body">
-              <span class="presentation">CAJA 10 CÁPSULAS</span>
-              <h4>Amoxicilina 500 mg</h4>
-              <p class="brand">Laboratorio: GENFAR</p>
-              <p class="desc">Antibiótico de amplio espectro. Su dispensación exige presentación de receta retenida.</p>
-              <div class="price-container">
-                <p class="price">S/ 11.90 <small>Precio Referencial</small></p>
-              </div>
-              <a href="#formulario" class="btn-card">Consultar Requisitos</a>
+        <!-- Sección 3: Requisitos -->
+        <section id="requisitos" class="content-section">
+            <h2>Requisitos de Atención</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span>1</span>
+                    <h4>Verifica el Producto</h4>
+                    <p>Revisa en nuestro catálogo si el medicamento requiere receta médica o es de venta libre.</p>
+                </div>
+                <div class="step-item">
+                    <span>2</span>
+                    <h4>Consulta Disponibilidad</h4>
+                    <p>Usa el formulario web para enviar tu duda antes de acudir a la farmacia.</p>
+                </div>
+                <div class="step-item">
+                    <span>3</span>
+                    <h4>Presenta tu Receta</h4>
+                    <p>Para medicamentos bajo receta, deberás presentar la orden médica física en la sede.</p>
+                </div>
             </div>
-          </article>
+        </section>
 
-          <article class="card">
-            <span class="badge receta">Requiere Receta</span>
-            <img src="img/LosartanPotasico.jpg" alt="amoxicilina 500 mg" class="card-img">
+        <!-- Sección 4: Formulario de Consultas -->
+        <section id="consultas" class="content-section">
+            <h2>Formulario de Consultas</h2>
+            <form>
+                <fieldset>
+                    <legend>Datos de la Consulta</legend>
 
-            <div class="card-body">
-              <span class="presentation">CAJA 30 TABLETAS</span>
-              <h4>Losartán Potásico 50 mg</h4>
-              <p class="brand">Laboratorio: MEDIFARMA</p>
-              <p class="desc">Antihipertensivo utilizado en el tratamiento de la hipertensión arterial bajo control médico.</p>
-              <div class="price-container">
-                <p class="price">S/ 16.80 <small>Precio Referencial</small></p>
-              </div>
-              <a href="#formulario" class="btn-card">Consultar Requisitos</a>
-            </div>
-          </article>
+                    <label for="producto">Producto o medicamento:</label>
+                    <input type="text" id="producto" placeholder="Ej. Amoxicilina 500 mg">
 
-        </div>
-      </div>
-    </section>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre y apellido" required>
 
-    <!-- SECCIÓN 3: CÓMO FUNCIONA / REQUISITOS -->
-    <section id="requisitos" class="content-section bg-alt">
-      <h2>3. Guía de Atención y Requisitos de Dispensación</h2>
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Consulte el Catálogo</h3>
-          <p>Identifique el producto requerido y verifique si corresponde a venta libre o bajo receta médica.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Valide los Requisitos</h3>
-          <p>Para medicamentos restringidos, asegúrese de contar con una receta médica vigente firmada por un colegiado.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Solicite Información</h3>
-          <p>Envíe sus consultas sobre stock, precios o sedes a través del formulario de atención en línea.</p>
-        </div>
-      </div>
-    </section>
+                    <label for="telefono">Teléfono / WhatsApp:</label>
+                    <input type="tel" id="telefono" placeholder="Ej. 987654321">
 
-    <!-- SECCIÓN 4: FORMULARIO DE CONSULTAS Y SOLICITUDES -->
-    <section id="formulario" class="content-section">
-      <h2>4. Formulario de Consultas y Orientación Farmacéutica</h2>
-      <form class="custom-form" action="#" method="post">
-        
-        <fieldset>
-          <legend>Datos de la Consulta</legend>
+                    <label for="mensaje">Consulta:</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe tu duda sobre stock..."></textarea>
 
-          <label for="producto">Producto o insumo sobre el cual desea consultar:</label>
-          <input type="text" id="producto" name="producto" required placeholder="Ej. Amoxicilina 500 mg">
+                    <input type="submit" value="Enviar Consulta">
+                </fieldset>
+            </form>
+        </section>
 
-          <label for="tipo_consulta">Tipo de consulta:</label>
-          <select id="tipo_consulta" name="tipo_consulta" required>
-            <option value="">Seleccione una opción</option>
-            <option value="stock">Consulta de Disponibilidad / Stock</option>
-            <option value="receta">Orientación sobre Requisitos de Receta</option>
-            <option value="precio">Consulta de Precios Institucionales</option>
-            <option value="reclamo">Atención de Sugerencias o Reclamos</option>
-          </select>
+        <!-- Sección 5: Ubicación -->
+        <section id="ubicacion" class="content-section">
+            <h2>Sedes y Atención</h2>
+            <p><strong>Atención Presencial:</strong> Av. Principal 123, Lima - Perú</p>
+            <p><strong>Horario:</strong> Lunes a Sábado de 8:00 am a 8:00 pm</p>
+            <p><strong>Teléfono:</strong> (01) 456-7890</p>
+        </section>
 
-          <label for="nombre">Nombre completo del usuario:</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Ej. Claudina Quispe">
+    </main>
 
-          <label for="distrito">Sede o distrito de preferencia:</label>
-          <select id="distrito" name="distrito" required>
-            <option value="">Seleccione su distrito</option>
-            <option value="lima">Lima Cercado</option>
-            <option value="miraflores">Miraflores</option>
-            <option value="san_isidro">San Isidro</option>
-            <option value="surco">Santiago de Surco</option>
-          </select>
-
-          <label for="telefono">Teléfono celular o WhatsApp:</label>
-          <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 987654321">
-        </fieldset>
-
-        <fieldset>
-          <legend>Adjuntar Receta (Opcional para validación previa)</legend>
-
-          <label for="receta">Subir imagen o PDF de receta médica para verificación técnica:</label>
-          <input type="file" id="receta" name="receta" accept="image/*,.pdf">
-        </fieldset>
-
-        <button type="submit" class="btn-submit">Enviar Consulta Institucional</button>
-      </form>
-    </section>
-
-    <!-- SECCIÓN 5: UBICACIÓN Y CONTACTO -->
-    <section id="ubicacion" class="content-section bg-alt">
-      <h2>5. Canales Institucionales y Sedes de Atención</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Central Informativa y Farma-Orientación</h3>
-          <p><strong>Dirección Sede Principal:</strong> Av. Arequipa 2650, San Isidro, Lima, Perú</p>
-          <p><strong>Central Telefónica:</strong> (01) 513-8888</p>
-          <p><strong>Correo Electrónico:</strong> consultas@farmasaludperu.pe</p>
-          <p><strong>Horario de Atención Presencial:</strong> Lunes a Domingo de 07:00 a.m. a 11:00 p.m.</p>
-        </div>
-        <div class="map-placeholder">
-          <p> Red de atención y orientación presencial en establecimientos autorizados en Lima.</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- PIE DE PÁGINA -->
-  <footer class="main-footer">
-    <p>&copy; 2026 FarmaSalud Perú S.A. | Portal Informativo de Salud</p>
-  </footer>
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 FarmaSalud Perú - Portal Informativo de Orientación Farmacéutica.</p>
+    </footer>
 
 </body>
 </html>
